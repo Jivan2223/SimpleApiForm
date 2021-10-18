@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+    <div class="col-sm-4" *ngFor="let post of users">
+      <div class="card m-1">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ post.username }}</h5>
+          <p class="card-text">{{ post.email }}</p>
+          <p class="card-text">{{ post.address.city }}</p>
+          <!-- <a href="#" class="btn btn-primary">Go to post</a> -->
+          <button class="btn btn-primary" [routerLink]="['/posts']" (click)="getPost(post)">Go to Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

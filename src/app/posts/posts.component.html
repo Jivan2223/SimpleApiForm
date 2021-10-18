@@ -1,0 +1,13 @@
+     <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">First User's Posts.</h4>
+      </div>
+      <div class="modal-body">
+        <div *ngFor="let post of posts">
+          <p> 
+            <strong>Titile:{{ post.title }}</strong>
+          </p>
+          <p>
+            Body: {{ post.body }}
+          </p>
+        </div>
+      </div>

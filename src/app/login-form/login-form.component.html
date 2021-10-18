@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <form [formGroup]="form" class="text-center">
+                    <h1 class="bg-dark text-light p-1"><b>PLEASE LOGIN</b></h1>
+                    <div class="form-group m-1">
+                        <input formControlName="validUsername" type="text" class="form-control" placeholder="User Name">
+                        <div *ngIf="validUsername.touched && validUsername.invalid" 
+                            class="alert alert-danger">
+                            <div *ngIf="validUsername.errors?.required">Username is required</div>
+                            <div *ngIf="validUsername.errors?.invalidUsername">Username is invalid</div>
+                        </div>
+                    </div>
+                    <div class="form-group m-1">
+                        <input formControlName="validPassword" type="password" class="form-control" placeholder="User Name">
+                        <div *ngIf="validPassword.touched && validPassword.invalid" 
+                            class="alert alert-danger">
+                            <div *ngIf="validPassword.errors?.required">Password is required</div>
+                            <div *ngIf="validPassword.errors?.invalidPassword">Password is invalid</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success m-1 w-50 form-control" type="submit" (click)="onSubmit()">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
