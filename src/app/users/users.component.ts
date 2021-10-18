@@ -36,11 +36,6 @@ export class UsersComponent implements OnInit  {
         });
   }
 
-
-  
-
-
-  
   open(content?:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -58,6 +53,5 @@ export class UsersComponent implements OnInit  {
       return  `with: ${reason}`;
     }
   }
-
 
 }
